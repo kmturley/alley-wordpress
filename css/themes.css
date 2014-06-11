@@ -1,0 +1,202 @@
+/*
+ * Themes
+ */
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 112.5%;
+    color: #222;
+    background-color: #f0eee8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p,
+blockquote {
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 0 0 10px 0;
+}
+
+h1 { font-size: 2.25em;  }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.75em; }
+p { font-size: 1em; line-height: 1.618em; }
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* width helpers */
+
+.w1of1 { width: 100%; }
+.w1of2 { width: 50%; }
+.w1of3 { width: 33.33333%; }
+.w2of3 { width: 66.66666%; }
+.w1of4 { width: 25%; }
+.w3of4 { width: 75%; }
+.w1of5 { width: 20%; }
+.w2of5 { width: 40%; }
+.w3of5 { width: 60%; }
+.w4of5 { width: 80%; }
+
+/* height helpers */
+
+.h1of1 { height: 100%; }
+.h1of2 { height: 50%; }
+.h1of3 { height: 33.33333%; }
+.h2of3 { height: 66.66666%; }
+.h1of4 { height: 25%; }
+.h3of4 { height: 75%; }
+.h1of5 { height: 20%; }
+.h2of5 { height: 40%; }
+.h3of5 { height: 60%; }
+.h4of5 { height: 80%; }
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.panel-row-style-restricted-width {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.panel-grid-cell {
+    float: left;
+}
+
+@media (max-width: 780px) {
+    .panel-grid-cell {
+        float: none;
+        width: auto;
+    }
+}
+
+/* navigation */
+
+.header {
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    background-color: #333;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+
+.header li {
+    float: left;
+}
+
+.header .nav .btn {
+    display: none;
+    cursor: pointer;
+}
+
+.header a {
+    color: #999;
+    text-decoration: none;
+}
+
+.header li a {
+    display: block;
+    padding: 0 20px 0 0;
+}
+
+.header .login {
+    float: right;
+}
+
+.header a:hover,
+.header .current_page_item a,
+.header .current_page_parent a {
+    color: #fff;
+}
+
+@media (max-width: 30em) {
+    .header li {
+        float: none;
+    }
+    .header li a {
+        padding: 0 20px 5px 0;
+    }
+    .header .nav .btn {
+        display: block;
+        font-size: 1.27em;
+        line-height: 1em;
+        padding: 0 20px 0 0;
+    }
+    .header .nav .menu {
+        padding: 10px 0 0 0;
+        display: none;
+    }
+
+    .header .nav:hover .menu {
+        display: block;
+    }
+}
+
+.content {
+    overflow: hidden;
+    padding-top: 62px;
+    height: 100%;
+}
+
+.content .panel-row-style-full-width img {
+    width: 100%;
+    display: block;
+}
+
+.content .panel-row-style-restricted-width {
+    background-color: #fff;
+}
+
+/* login page */
+
+.login h1 a {
+    background-image: url('../img/alley.jpg');
+    background-size: 300px 72px;
+    width: 300px;
+    height: 72px;
+}
