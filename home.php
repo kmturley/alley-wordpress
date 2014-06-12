@@ -3,7 +3,9 @@
     <div class="panel-grid">
         <div class="panel-row-style-restricted-width panel-row-style">
             <div class="panel-grid-cell w1of1">
-                <?php echo apply_filters('the_title', get_post_field('post_content', get_option('page_for_posts'))); ?>
+                <div class="panel">
+                    <?php echo apply_filters('the_title', get_post_field('post_content', get_option('page_for_posts'))); ?>
+                </div>
             </div>
         </div>
     </div>

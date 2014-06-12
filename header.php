@@ -14,14 +14,16 @@
         <div class="panel-grid">
             <div class="panel-row-style-restricted-width panel-row-style">
                 <div class="panel-grid-cell w1of1">
-                    <ul class="nav">
-                        <li>
-                            <a class="btn">&#9776;</a>
-                            <?php wp_nav_menu(); ?>
-                        </li>
-                    </ul>
-                    <div class="login">
-                        <?php wp_loginout(); ?>
+                    <div class="panel">
+                        <ul class="nav">
+                            <li>
+                                <a class="btn">&#9776;</a>
+                                <?php wp_nav_menu(); ?>
+                            </li>
+                        </ul>
+                        <div class="login">
+                            <?php wp_loginout(); ?>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -52,8 +52,9 @@ blockquote p {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    display: block;
 }
 
 /* width helpers */
@@ -89,24 +90,6 @@ img {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.panel-row-style-restricted-width {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.panel-grid-cell {
-    float: left;
-}
-
-@media (max-width: 780px) {
-    .panel-grid-cell {
-        float: none;
-        width: auto;
-    }
 }
 
 /* navigation */
@@ -177,19 +160,31 @@ img {
     }
 }
 
+.panel-row-style-restricted-width {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.panel-row-style-restricted-width > .panel-grid-cell > .panel {
+    padding: 20px 20px 20px 20px;
+}
+
 .content {
     overflow: hidden;
-    padding-top: 62px;
+    padding-top: 58px;
     height: 100%;
 }
 
-.content .panel-row-style-full-width img {
-    width: 100%;
-    display: block;
+.content .panel-row-style-restricted-width {
+    background: #fff;
 }
 
-.content .panel-row-style-restricted-width {
-    background-color: #fff;
+@media (max-width: 780px) {
+    .panel-grid-cell {
+        float: none;
+        width: auto;
+    }
 }
 
 /* login page */
