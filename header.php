@@ -1,19 +1,19 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>" />
-    <title><?php bloginfo('name'); ?> <?php wp_title('|',1); ?></title>
-    <meta name="description" content="<?php if ( is_single() ) { single_post_title('', true); } else { bloginfo('name'); echo " - "; bloginfo('description'); } ?>" />
-    <meta name=viewport content="width=device-width,initial-scale=1" />
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css" />
     <?php wp_head(); ?>
 </head>
-<body class="no-select">
+<body <?php body_class(); ?>>
     <div class="header">
-        <div class="panel-grid">
-            <div class="panel-row-style-restricted-width panel-row-style">
-                <div class="panel-grid-cell w1of1">
+        <div class="panel-grid panel-grid-style-default">
+            <div class="panel-row-style-default panel-row-style">
+                <div class="panel-grid-cell">
                     <div class="panel">
                         <ul class="nav">
                             <li>
@@ -29,4 +29,4 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="container">

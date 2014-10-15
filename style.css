@@ -11,5 +11,8 @@
     Text Domain: alley
 */
 
-@import url('css/normalize.css');
-@import url('css/themes.css');
+@import url('css/global/normalize.css');
+@import url('css/global/layout.css');
+@import url('css/global/theme.css');
+@import url('css/modules/header.css');
+@import url('css/modules/footer.css');

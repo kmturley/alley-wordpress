@@ -35,16 +35,34 @@ add_filter('show_admin_bar', '__return_false');
 
 // modify the default except ending to includ ellipsis and read more link
 function new_excerpt_more( $more ) {
-	return '...<p><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a></p><p>&nbsp;</p>';
+    return '...<p><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a></p><p>&nbsp;</p>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-// add row styles to the Site Origin Page Builder plugin
+// add custom row styles to Page Builder
 function mytheme_panels_row_styles($styles) {
-    $styles['restricted-width'] = __('Restricted Width', 'alley');
-	$styles['full-width'] = __('Full Width', 'alley');
-	return $styles;
+    $styles['full'] = __('Full width', 'alley');
+    $styles['full-v'] = __('Full width, vertical centered', 'alley');
+    $styles['fit'] = __('Fit width and height', 'alley');
+    $styles['fit-v'] = __('Fit width and height, vertical centered', 'alley');
+    $styles['wide'] = __('Wide aspect ratio', 'alley');
+    $styles['wide-v'] = __('Wide aspect ratio, vertical centered', 'alley');
+    return $styles;
 }
-add_filter('siteorigin_panels_row_styles', 'mytheme_panels_row_styles');
+
+// add custom row classes to Page Builder using the row styles set above ^
+function mytheme_panels_row_classes($grid_classes, $row_classes) {
+    if (!empty($row_classes)) {
+        if (!empty($row_classes['style']['class'])) {
+            $grid_classes[0] = $grid_classes[0] . ' panel-grid-style-' . $row_classes['style']['class'];
+        } else {
+            $grid_classes[0] = $grid_classes[0] . ' panel-grid-style-default';
+        }
+    }
+    return $grid_classes;
+}
+
+add_filter('siteorigin_panels_row_styles', 'mytheme_panels_row_styles', 10, 1);
+add_filter('siteorigin_panels_row_classes', 'mytheme_panels_row_classes', 10, 2);
 
 ?>

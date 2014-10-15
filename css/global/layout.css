@@ -1,0 +1,125 @@
+/*
+ * Layout
+ */
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    padding-top: 57px;
+    height: 100%;
+}
+
+.container img {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+/* row default */
+
+.panel-grid-style-default {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+/* row full, fit, wide */
+
+.panel-grid-style-full .widget_black-studio-tinymce,
+.panel-grid-style-full-v .widget_black-studio-tinymce,
+.panel-grid-style-fit .widget_black-studio-tinymce,
+.panel-grid-style-fit-v .widget_black-studio-tinymce,
+.panel-grid-style-wide .widget_black-studio-tinymce,
+.panel-grid-style-wide-v .widget_black-studio-tinymce,
+.panel-grid-style-full .widget_text,
+.panel-grid-style-full-v .widget_text,
+.panel-grid-style-fit .widget_text,
+.panel-grid-style-fit-v .widget_text,
+.panel-grid-style-wide .widget_text,
+.panel-grid-style-wide-v .widget_text {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 980px;
+    overflow: hidden;
+}
+
+@media (max-width: 780px) {
+    .panel-grid-style-full .widget_black-studio-tinymce,
+    .panel-grid-style-full-v .widget_black-studio-tinymce,
+    .panel-grid-style-fit .widget_black-studio-tinymce,
+    .panel-grid-style-fit-v .widget_black-studio-tinymce,
+    .panel-grid-style-wide .widget_black-studio-tinymce,
+    .panel-grid-style-wide-v .widget_black-studio-tinymce,
+    .panel-grid-style-full .widget_text,
+    .panel-grid-style-full-v .widget_text,
+    .panel-grid-style-fit .widget_text,
+    .panel-grid-style-fit-v .widget_text,
+    .panel-grid-style-wide .widget_text,
+    .panel-grid-style-wide-v .widget_text{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* row full */
+
+.panel-grid-style-full,
+.panel-grid-style-full-v {
+}
+
+/* row fit */
+
+.panel-grid-style-fit,
+.panel-row-style-fit,
+.panel-grid-style-fit-v,
+.panel-row-style-fit-v {
+    height: 100%;
+}
+
+.panel-row-style-fit-v .panel-grid-cell,
+.panel-row-style-wide-v .panel-grid-cell {
+    display: table;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.panel-row-style-fit-v .panel-grid-cell .panel,
+.panel-row-style-wide-v .panel-grid-cell .panel {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+/* row wide */
+
+.panel-grid-style-wide,
+.panel-grid-style-wide-v {
+    height: auto;
+    position: relative;
+    padding-top: 56.25%;
+    overflow-y: auto;
+}
+
+.panel-row-style-wide,
+.panel-row-style-wide-v {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
