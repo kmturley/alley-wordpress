@@ -40,17 +40,25 @@ hr {
     border: 1px solid #c0c0c0;
 }
 
-img {
-    max-width: 100%;
-}
 
 .container .panel-grid-style-default {
-    background-color: #fff;
-}
-
-.container .widget_black-studio-tinymce,
-.container .widget_text {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #fff;
+    -webkit-box-shadow: 2px 2px 5px 0 #DBDBDB;
+    box-shadow: 2px 2px 5px 0 #DBDBDB;
 }
+
+.panel-grid-style-default .widget_black-studio-tinymce,
+.panel-grid-style-default .widget_text {
+    background-color: #fff;
+}
+
+/* blog */
+
+.col {
+    float: left;
+}
+
+.w1of3 { width: 33.33%; }
+.w2of3 { width: 66.66%; }

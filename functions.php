@@ -42,11 +42,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // add custom row styles to Page Builder
 function mytheme_panels_row_styles($styles) {
     $styles['full'] = __('Full width', 'alley');
-    $styles['full-v'] = __('Full width, vertical centered', 'alley');
     $styles['fit'] = __('Fit width and height', 'alley');
     $styles['fit-v'] = __('Fit width and height, vertical centered', 'alley');
     $styles['wide'] = __('Wide aspect ratio', 'alley');
-    $styles['wide-v'] = __('Wide aspect ratio, vertical centered', 'alley');
     return $styles;
 }
 
